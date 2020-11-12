@@ -2,8 +2,8 @@ const TuyAPI = require('tuyapi');
 const sleep = require('util').promisify(setTimeout);
 
 let device = new TuyAPI({
-    id: '43048040d8bfc0dd9c88',
-    key: '122f494269a487d3',
+    id: 'xxxxxxx',
+    key: 'xxxxxxx',
 });
 let lastLightState = null;
 
