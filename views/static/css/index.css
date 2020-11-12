@@ -1,0 +1,150 @@
+*,
+*:before,
+*:after {
+    transition: .2s ease-in-out;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+html,
+body {
+    font-family: helvetica neue, helvetica, arial, sans-serif;
+    font-weight: 200;
+    background-color: #132436;
+}
+
+.light-switch {
+    position: absolute;
+    left: 0;
+    top: 0;
+    opacity: 0;
+}
+
+.light-switch:checked+.light-switch-label .switch:before {
+    height: calc(16vh * 0.25);
+    top: 0px;
+    line-height: calc(16vh * 0.25);
+    background: #fff4d3;
+    color: #64bf60;
+    text-shadow: 0 0 calc(0.64vh * 0.25) #38ff2e;
+}
+
+.light-switch:checked+.light-switch-label .switch:after {
+    height: calc(15vh * 0.25);
+    bottom: calc(1.1vh * 0.25);
+    line-height: calc(15vh * 0.25);
+    background: #fffaea;
+    box-shadow: 0 calc(1.1vh * 0.25) 0 #d0b57b;
+    color: #d7bf95;
+    text-shadow: 0 0 0px transparent;
+}
+
+.light-switch-left {
+    border-radius: calc(2.1vh * 0.25) 0 0 calc(2.1vh * 0.25) !important;
+    margin-right: calc(-2.1vh * 0.25);
+}
+
+.light-switch-right {
+    border-radius: 0 calc(2.1vh * 0.25) calc(2.1vh * 0.25) 0 !important;
+    margin-left: calc(-2.1vh * 0.25);
+}
+
+.light-switch-left,
+.light-switch-right {
+    width: calc(32vh * 0.25) !important;
+}
+
+.light-switch-label {
+    position: relative;
+    display: inline-block;
+    height: calc(64vh * 0.25);
+    width: calc(42.7vh * 0.25);
+    background-color: #fff4d3;
+    border-radius: calc(2.1vh * 0.25);
+}
+
+.light-switch-label .switch {
+    cursor: pointer;
+    height: calc(32vh * 0.25);
+    width: calc(21.2vh * 0.25);
+    background: #fffaea;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin: calc(-16vh * 0.25) 0 0 calc(-10.6vh * 0.25);
+    border-radius: calc(1.1vh * 0.25);
+    overflow: hidden;
+    box-shadow: 0 10px 10px -5px rgba(233, 219, 176, 0), 0 0 0 1px rgba(0, 0, 0, 0.1), 0 0 0 4px #fff4d3, 0 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+.light-switch-label .switch:before {
+    content: 'ON';
+    display: block;
+    position: absolute;
+    height: calc(15vh * 0.25);
+    text-align: center;
+    line-height: calc(15vh * 0.25);
+    width: calc(21.2vh * 0.25);
+    top: calc(1.1vh * 0.25);
+    left: 0;
+    background: #efe0b1;
+    color: #bfa371;
+    border-radius: calc(1.1vh * 0.25) calc(1.1vh * 0.25) 0 0;
+}
+
+.light-switch-label .switch:after {
+    content: 'OFF';
+    display: block;
+    position: absolute;
+    height: calc(16vh * 0.25);
+    text-align: center;
+    line-height: calc(16vh * 0.25);
+    width: calc(21.2vh * 0.25);
+    bottom: 0;
+    left: 0;
+    background: #fff4d3;
+    color: #a4441a;
+    text-shadow: 0 0 calc(0.64vh * 0.25) #ff4e00;
+    border-radius: 0 0 calc(1.1vh * 0.25) calc(1.1vh * 0.25);
+}
+
+.light-switch-label .screw {
+    position: absolute;
+    height: calc(3.4vh * 0.25);
+    width: calc(3.4vh * 0.25);
+    border-radius: 100%;
+    left: 50%;
+    margin-left: calc(-1.7vh * 0.25);
+    background: #e3d4a5;
+    overflow: hidden;
+    box-shadow: inset 0 calc(0.43vh * 0.25) 0 rgba(0, 0, 0, 0.15);
+}
+
+.light-switch-label .screw:before {
+    content: '';
+    display: block;
+    position: absolute;
+    height: 100%;
+    width: calc(0.43vh * 0.25);
+    left: 50%;
+    margin-left: calc(-0.1vh * 0.25);
+    background: rgba(0, 0, 0, 0.2);
+}
+
+.light-switch-label .screw:first-of-type {
+    top: calc(6.4vh * 0.25);
+}
+
+.light-switch-label .screw:last-of-type {
+    bottom: calc(6.4vh * 0.25);
+}
+
+.container {
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(2.5);
+}
